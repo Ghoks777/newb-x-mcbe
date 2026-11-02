@@ -1,0 +1,48 @@
+name: anime-world-android-build
+
+on:
+  push:
+    branches:
+      - anime-world-cel-edition
+    paths:
+      - ".github/workflows/anime-world-android-build.yml"
+      - "src/**"
+      - "assets/**"
+      - "requirements.txt"
+      - "tool/**"
+      - "build.sh"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          ref: anime-world-cel-edition
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Prepare shader compiler
+        run: ./build.sh setup
+
+      - name: Build Android resource pack
+        run: ./build.sh pack -p android
+
+      - name: Upload .mcpack artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: anime-world-cel-edition-android
+          path: build/*.mcpack
+          if-no-files-found: error
+          retention-days: 14
