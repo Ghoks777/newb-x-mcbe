@@ -69,6 +69,13 @@ void main() {
 
   albedo.rgb = mix(albedo.rgb, v_fog.rgb, v_fog.a);
 
+  // Anime World: subtle five-step cel lighting for mobs, animals and player models.
+  #if defined(NL_CEL_SHADING)
+    float actorLuma = dot(albedo.rgb, vec3(0.299, 0.587, 0.114));
+    float actorBand = floor(clamp(actorLuma, 0.0, 1.0) * NL_CEL_BANDS + 0.5) / NL_CEL_BANDS;
+    albedo.rgb *= actorBand / max(actorLuma, 0.001);
+  #endif
+
   albedo.rgb = colorCorrection(albedo.rgb);
 
   gl_FragColor = albedo;

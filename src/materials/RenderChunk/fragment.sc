@@ -56,6 +56,14 @@ void main() {
 
   diffuse.rgb = mix(diffuse.rgb, v_fog.rgb, v_fog.a);
 
+  // Anime World: four-step cel shading for solid and cutout geometry only.
+  // Transparent materials (especially water) keep their original gradients.
+  #if defined(NL_CEL_SHADING) && (defined(OPAQUE) || defined(ALPHA_TEST))
+    float celLuma = dot(diffuse.rgb, vec3(0.299, 0.587, 0.114));
+    float celBand = floor(clamp(celLuma, 0.0, 1.0) * NL_CEL_BANDS + 0.5) / NL_CEL_BANDS;
+    diffuse.rgb *= celBand / max(celLuma, 0.001);
+  #endif
+
   diffuse.rgb = colorCorrection(diffuse.rgb);
 
   gl_FragColor = diffuse;
