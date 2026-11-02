@@ -1,15 +1,15 @@
-name = "Newb Classic"
-version = [0, 16, 57]
+name = "Anime World - Cel Edition"
+version = [1, 0, 0]
 min_supported_mc_version = [1, 26, 60]
 description = '''
 §c%w
-§7- An enchanced vanilla shader for Minecraft!
+§7- Anime-inspired cel shading for Minecraft Bedrock!
 %v
 §3https://newb-shader.devendrn.com/
 ''' # %w = patch warning, %v = version
-authors = ["devendrn"]
-url = "https://newb-shader.devendrn.com/"
-uuid = "95f774cf-4afa-73e7-a21a-72146307b1d2" # Use https://www.uuidgenerator.net/version4
+authors = ["Ghoks777", "Newb Shader Contributors"]
+url = "https://github.com/Ghoks777/newb-x-mcbe"
+uuid = "d0c28c7e-4db4-4e0c-b4a8-ff3a4a26e101" # Use https://www.uuidgenerator.net/version4
 materials = ["Actor", "ActorGlint", "ActorMultiTexture", "Clouds", "EndSky", "ItemInHandColor", "ItemInHandColorGlint", "ItemInHandTextured", "RenderChunk","Sky", "Stars", "SunMoon", "Weather"]
 
 [info] 
