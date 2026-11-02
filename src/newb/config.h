@@ -43,7 +43,7 @@
 /* Lighting */
 #define NL_SUNLIGHT_INTENSITY   3.0  // 1.0 weak ~ 5.0 bright
 #define NL_TORCHLIGHT_INTENSITY 1.0  // 0.5 weak ~ 3.0 bright
-#define NL_SHADOW_INTENSITY     0.72  // 0.0 no shadow ~ 1.0 strong shadow
+#define NL_SHADOW_INTENSITY     0.68  // 0.0 no shadow ~ 1.0 strong shadow
 #define NL_MIN_LIGHTING_BOOST   1.25  // 1.0 minimal lighting boost for dark areas ~ 3.0 brighter dark areas
 //#define NL_BLINKING_TORCH  // [toggle] flickering light
 #define NL_CLOUD_SHADOW      // [toggle] cloud shadow (simple clouds only)
@@ -65,9 +65,9 @@
 
 /* Fog */
 #define NL_FOG 1.0                // [toggle] 0.1 subtle ~ 1.0 blend with sky completely
-#define NL_MIST_DENSITY 0.10      // 0.0 no mist ~ 1.0 misty
+#define NL_MIST_DENSITY 0.07      // 0.0 no mist ~ 1.0 misty
 #define NL_RAIN_MIST_OPACITY 0.12 // [toggle] 0.04 very subtle ~ 0.5 thick rain mist blow
-#define NL_CLOUDY_FOG 0.06         // [toggle] 0.0 subtle - 0.8 dense fog clouds
+#define NL_CLOUDY_FOG 0.04         // [toggle] 0.0 subtle - 0.8 dense fog clouds
 
 /* Sky */
 #define NL_SKY_VOID_FACTOR     0.5
@@ -75,12 +75,12 @@
 #define NL_SKY_RAIN_MIX_FACTOR 0.9
 
 /* Sky colors - zenith=top, horizon=bottom */
-#define NL_DAWN_ZENITH_COL   vec3(0.1,0.4,0.7)
-#define NL_DAWN_HORIZON_COL  vec3(3.0,0.4,0.4)
-#define NL_DAWN_EDGE_COL     vec3(2.0,0.8,0.8)
-#define NL_DAY_ZENITH_COL    vec3(0.12,0.48,1.35)
-#define NL_DAY_HORIZON_COL   vec3(0.48,0.88,1.25)
-#define NL_DAY_EDGE_COL      vec3(0.82,1.12,1.38)
+#define NL_DAWN_ZENITH_COL   vec3(0.22,0.48,0.82)
+#define NL_DAWN_HORIZON_COL  vec3(1.55,0.72,0.58)
+#define NL_DAWN_EDGE_COL     vec3(1.85,1.12,0.92)
+#define NL_DAY_ZENITH_COL    vec3(0.16,0.52,1.28)
+#define NL_DAY_HORIZON_COL   vec3(0.62,0.94,1.22)
+#define NL_DAY_EDGE_COL      vec3(0.96,1.16,1.34)
 #define NL_NIGHT_ZENITH_COL  vec3(0.008,0.048,0.08)
 #define NL_NIGHT_HORIZON_COL vec3(0.02,0.06,0.1)
 #define NL_NIGHT_EDGE_COL    vec3(0.04,0.08,0.1)
@@ -116,14 +116,14 @@
 #define NL_WATER_TEX_OPACITY 0.3  // 0.0 plain water ~ 1.0 vanilla water texture
 #define NL_WATER_WAVE             // [toggle] wave effect
 //#define NL_WATER_REFL_MASK      // [toggle] fake water reflection mask
-#define NL_WATER_TINT vec3(0.28,0.72,1.0)
+#define NL_WATER_TINT vec3(0.24,0.68,1.0)
 
 /* Underwater */
 #define NL_UNDERWATER_BRIGHTNESS 0.8         // 0.0 dark ~ 3.0 bright
 #define NL_CAUSTIC_INTENSITY 1.9             // 0.5 weak ~ 5.0 bright
 #define NL_UNDERWATER_WAVE 0.1               // [toggle] 0.02 subtle ~ 0.6 trippy
 #define NL_UNDERWATER_STREAKS 1.0            // [toggle] 0.8 subtle - 2.0 bright streaks from top
-#define NL_UNDERWATER_TINT vec3(0.9,1.0,0.9) // fog tint color when underwater
+#define NL_UNDERWATER_TINT vec3(0.72,0.92,1.0) // fog tint color when underwater
 
 /* Cloud type */
 #define NL_CLOUD_TYPE 2 // 0:vanilla, 1:soft, 2:rounded, 3:realistic
@@ -147,8 +147,8 @@
 #define NL_CLOUD2_STEPS 5                  // 3 low quality ~ 16 high quality
 #define NL_CLOUD2_SCALE vec2(0.033, 0.033) // 0.003 large ~ 0.3 tiny
 #define NL_CLOUD2_SHAPE vec2(0.5, 0.4)     // 0.0 round ~ 1.0 box vec2(horizontal shape, vertical shape)
-#define NL_CLOUD2_DENSITY 25.0             // 1.0 blurry ~ 100.0 sharp
-#define NL_CLOUD2_VELOCITY 0.8             // 0.0 static ~ 4.0 very fast
+#define NL_CLOUD2_DENSITY 19.0             // 1.0 blurry ~ 100.0 sharp
+#define NL_CLOUD2_VELOCITY 0.55             // 0.0 static ~ 4.0 very fast
 //#define NL_CLOUD2_LAYER2                      // [toggle] extra cloud layer
 #define NL_CLOUD2_LAYER2_OFFSET 143.0           // 30.0 near ~ 300.0 very high
 #define NL_CLOUD2_LAYER2_THICKNESS 2.5          // 0.7 slim ~ 5.0 fat
@@ -209,7 +209,7 @@
 
 /* Entity (Actor, ItemInHand) */
 #define NL_ENTITY_BRIGHTNESS     0.65 // 0.1 dark ~ 1.6 bright
-#define NL_ENTITY_EDGE_HIGHLIGHT 0.41 // [toggle] 0.0 no highlight ~ 1.6 bright highlight
+#define NL_ENTITY_EDGE_HIGHLIGHT 0.52 // [toggle] 0.0 no highlight ~ 1.6 bright highlight
 
 /* Weather particles */
 #define NL_WEATHER_SPECK 0.6         // [toggle] 0.0 vanilla texture ~ 1.0 soft speck
