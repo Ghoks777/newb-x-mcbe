@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - anime-world-cel-edition
+      - anime-world-cel-edition-v2
     paths:
       - ".github/workflows/anime-world-android-build.yml"
       - "src/**"
