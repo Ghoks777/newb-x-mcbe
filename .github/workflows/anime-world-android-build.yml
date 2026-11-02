@@ -5,6 +5,7 @@ on:
     branches:
       - anime-world-cel-edition
       - anime-world-cel-edition-v2
+      - anime-world-cel-edition-v3
     paths:
       - ".github/workflows/anime-world-android-build.yml"
       - "src/**"
